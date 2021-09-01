@@ -3,6 +3,7 @@ import { YESNO_THEME_KEY, YesNoField } from './Field/YesNo'
 import { Badge } from './Badge'
 import { Banner } from './Banner'
 import { Button } from './Button'
+import { DropdownMenu } from './DropdownMenu'
 import { Form } from './Form'
 import { FormError } from './FormError'
 import { FormLabel } from './FormLabel'
@@ -29,6 +30,7 @@ export const components = {
   Input,
   Link,
   InlineMessage,
+  DropdownMenu,
   NumberInput,
   PhoneNumberInput,
   Textarea,
