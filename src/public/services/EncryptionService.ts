@@ -5,6 +5,7 @@ import {
   DateResponse,
   DecimalResponse,
   DropdownResponse,
+  DistrictResponse,
   EmailResponse,
   FieldResponse,
   HeaderResponse,
@@ -71,6 +72,8 @@ const validateResponses = (responses: unknown): FieldResponse[] => {
         return DateResponse.parse(response)
       case BasicField.Dropdown:
         return DropdownResponse.parse(response)
+      case BasicField.District:
+        return DistrictResponse.parse(response)
       case BasicField.Email:
         return EmailResponse.parse(response)
       case BasicField.HomeNo:

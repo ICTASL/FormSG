@@ -1,5 +1,5 @@
 const ArrayAnswerField = require('./ArrayAnswerField.class')
-const { DropdownField, TextField } = require('.')
+const { DropdownField, TextField, DistrictField } = require('.')
 
 /**
  * Field class for field.fieldType === 'table'.
@@ -201,6 +201,8 @@ class TableField extends ArrayAnswerField {
         return DropdownField
       case 'textfield':
         return TextField
+      case 'district':
+        return DistrictField
       default:
         throw new Error('Invalid fieldtype passed to _getChildClass.')
     }

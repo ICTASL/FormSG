@@ -68,6 +68,7 @@ import {
   createDateFieldSchema,
   createDecimalFieldSchema,
   createDropdownFieldSchema,
+  createDistrictFieldSchema,
   createEmailFieldSchema,
   createHomenoFieldSchema,
   createImageFieldSchema,
@@ -441,6 +442,7 @@ const compileFormModel = (db: Mongoose): IFormModel => {
     createAttachmentFieldSchema(),
   )
   FormFieldPath.discriminator(BasicField.Dropdown, createDropdownFieldSchema())
+  FormFieldPath.discriminator(BasicField.District,createDistrictFieldSchema())
   FormFieldPath.discriminator(BasicField.Radio, createRadioFieldSchema())
   FormFieldPath.discriminator(BasicField.Checkbox, createCheckboxFieldSchema())
   FormFieldPath.discriminator(
@@ -473,6 +475,10 @@ const compileFormModel = (db: Mongoose): IFormModel => {
   TableColumnPath.discriminator(
     BasicField.Dropdown,
     createDropdownFieldSchema(),
+  )
+  TableColumnPath.discriminator(
+      BasicField.District,
+      createDistrictFieldSchema(),
   )
 
   // Discriminator defines all possible values of startPage.logo

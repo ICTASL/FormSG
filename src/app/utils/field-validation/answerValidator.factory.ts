@@ -14,6 +14,7 @@ import { constructAttachmentValidator } from './validators/attachmentValidator'
 import { constructCheckboxValidator } from './validators/checkboxValidator'
 import { constructDateValidator } from './validators/dateValidator'
 import { constructDecimalValidator } from './validators/decimalValidator'
+import { constructDistrictValidator } from './validators/districtValidator'
 import { constructDropdownValidator } from './validators/dropdownValidator'
 import { constructEmailValidator } from './validators/emailValidator'
 import { constructHomeNoValidator } from './validators/homeNoValidator'
@@ -59,6 +60,8 @@ export const constructSingleAnswerValidator = (
       return constructDecimalValidator(formField)
     case BasicField.Dropdown:
       return constructDropdownValidator(formField)
+    case BasicField.District:
+      return constructDistrictValidator(formField)
     case BasicField.Email:
       return constructEmailValidator(formField)
     case BasicField.Uen:

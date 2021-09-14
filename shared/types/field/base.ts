@@ -10,6 +10,7 @@ export enum BasicField {
   ShortText = 'textfield',
   LongText = 'textarea',
   Dropdown = 'dropdown',
+  District='district',
   YesNo = 'yes_no',
   Checkbox = 'checkbox',
   Radio = 'radiobutton',

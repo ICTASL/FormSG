@@ -4,6 +4,7 @@ import {
   IShortTextFieldSchema,
   OmitUnusedValidatorProps,
 } from '../../../types'
+import { IDistrictFieldSchema } from '../../../types/field/districtField'
 
 /**
  * Return type of createAnswerFieldFromColumn().
@@ -14,6 +15,7 @@ import {
 type ColumnWithFieldProperties =
   | OmitUnusedValidatorProps<IShortTextFieldSchema>
   | OmitUnusedValidatorProps<IDropdownFieldSchema>
+  | OmitUnusedValidatorProps<IDistrictFieldSchema>
 
 /**
  * Takes a table field column and generates a form field by

@@ -4,6 +4,7 @@ const {
   DateField,
   DecimalField,
   DropdownField,
+  DistrictField,
   EmailField,
   HeaderField,
   MobileField,
@@ -54,6 +55,8 @@ const getClass = (fieldType) => {
       return DecimalField
     case 'dropdown':
       return DropdownField
+    case 'district':
+      return DistrictField
     case 'email':
       return EmailField
     case 'homeno':

@@ -6,6 +6,7 @@ import { ICheckboxFieldSchema } from './checkboxField'
 import { IDateFieldSchema } from './dateField'
 import { IDecimalFieldSchema } from './decimalField'
 import { IDropdownFieldSchema } from './dropdownField'
+import { IDistrictFieldSchema } from './districtField'
 import { IEmailFieldSchema } from './emailField'
 import { IHomenoFieldSchema } from './homeNoField'
 import { IImageFieldSchema } from './imageField'
@@ -28,6 +29,7 @@ export * from './checkboxField'
 export * from './dateField'
 export * from './decimalField'
 export * from './dropdownField'
+export * from './districtField'
 export * from './emailField'
 export * from './homeNoField'
 export * from './imageField'
@@ -61,6 +63,7 @@ export type FormFieldSchema =
   | IDateFieldSchema
   | IDecimalFieldSchema
   | IDropdownFieldSchema
+  | IDistrictFieldSchema
   | IEmailFieldSchema
   | IHomenoFieldSchema
   | IImageFieldSchema
@@ -101,6 +104,7 @@ export type FieldValidationSchema =
   | OmitUnusedValidatorProps<IDateFieldSchema>
   | OmitUnusedValidatorProps<IDecimalFieldSchema>
   | OmitUnusedValidatorProps<IDropdownFieldSchema>
+  | OmitUnusedValidatorProps<IDistrictFieldSchema>
   | OmitUnusedValidatorProps<IEmailFieldSchema>
   | OmitUnusedValidatorProps<IHomenoFieldSchema>
   | OmitUnusedValidatorProps<IImageFieldSchema>

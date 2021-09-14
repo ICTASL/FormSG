@@ -45,6 +45,7 @@ type LogicField = Extract<
   | BasicField.Dropdown
   | BasicField.Radio
   | BasicField.YesNo
+  | BasicField.District
   | BasicField.Number
   | BasicField.Decimal
   | BasicField.Rating
@@ -58,7 +59,7 @@ type LogicAssociation<K extends LogicField, VS extends LogicConditionState> = [
 // Logic fields that are categorical
 type CategoricalLogicField = Extract<
   BasicField,
-  BasicField.Dropdown | BasicField.Radio
+  BasicField.Dropdown | BasicField.Radio | BasicField.District
 >
 type CategoricalLogicStates =
   | LogicConditionState.Equal

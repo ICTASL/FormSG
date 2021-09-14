@@ -170,7 +170,7 @@ function EditLogicModalController(
       return
     }
 
-    if (field.fieldType === 'dropdown' || field.fieldType === 'radiobutton') {
+    if ( field.fieldType === 'dropdown' || field.fieldType === 'radiobutton' || field.fieldType === 'district') {
       condition.ifValues = field.fieldOptions
 
       if (field.fieldType === 'radiobutton' && field.othersRadioButton) {

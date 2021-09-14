@@ -22,6 +22,10 @@ const LOGIC_CONDITIONS: LogicCondition[] = [
     [LogicConditionState.Equal, LogicConditionState.Either],
   ],
   [
+    BasicField.District,
+    [LogicConditionState.Equal, LogicConditionState.Either],
+  ],
+  [
     BasicField.Number,
     [
       LogicConditionState.Equal,

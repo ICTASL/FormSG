@@ -41,7 +41,7 @@ function tableFieldComponentController($scope) {
   // the table, otherwise the options in those dropdowns get hidden.
   vm.handleDropdownClick = function (fieldType, index) {
     // Flip end padding state if a dropdown in the last 2 rows are clicked
-    if (fieldType === 'dropdown' && index >= vm.getNumRows() - 2) {
+    if (fieldType === 'dropdown' || fieldType === 'district' && index >= vm.getNumRows() - 2) {
       vm.hasEndPadding = !vm.hasEndPadding
     }
   }

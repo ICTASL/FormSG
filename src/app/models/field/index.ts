@@ -3,6 +3,7 @@ import { BaseFieldSchema } from './baseField'
 import createCheckboxFieldSchema from './checkboxField'
 import createDateFieldSchema from './dateField'
 import createDecimalFieldSchema from './decimalField'
+import createDistrictFieldSchema from './districtField'
 import createDropdownFieldSchema from './dropdownField'
 import createEmailFieldSchema from './emailField'
 import createHomenoFieldSchema from './homeNoField'
@@ -26,6 +27,7 @@ export {
   createDateFieldSchema,
   createDecimalFieldSchema,
   createDropdownFieldSchema,
+  createDistrictFieldSchema,
   createEmailFieldSchema,
   createHomenoFieldSchema,
   createImageFieldSchema,

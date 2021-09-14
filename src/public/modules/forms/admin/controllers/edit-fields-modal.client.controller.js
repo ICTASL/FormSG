@@ -59,7 +59,7 @@ function EditFieldsModalController(
   vm.attachmentsMax = externalScope.attachmentsMax
 
   if (
-    ['dropdown', 'checkbox'].includes(vm.field.fieldType) &&
+    ['dropdown', 'checkbox','district'].includes(vm.field.fieldType) &&
     vm.field.fieldOptions.length > 0
   ) {
     vm.field.fieldOptionsFromText = vm.field.fieldOptions.join('\n')
@@ -112,13 +112,14 @@ function EditFieldsModalController(
     return (
       field.fieldType === 'dropdown' ||
       field.fieldType === 'checkbox' ||
+      field.fieldType === 'district' ||
       field.fieldType === 'radiobutton'
     )
   }
 
   // add new option to the field
   vm.addOption = function (currField) {
-    if (['dropdown', 'checkbox', 'radiobutton'].includes(currField.fieldType)) {
+    if (['dropdown', 'checkbox', 'radiobutton','district'].includes(currField.fieldType)) {
       currField.manualOptions = currField.manualOptions
         ? currField.manualOptions
         : []
@@ -179,7 +180,7 @@ function EditFieldsModalController(
   vm.showEmptyOptionsError = function (field) {
     // Empty options should only appear on fields that have options to choose from
     // A blank option is considered to be a non-empty option
-    if (!['dropdown', 'radiobutton', 'checkbox'].includes(field.fieldType)) {
+    if (!['dropdown', 'radiobutton', 'checkbox','district'].includes(field.fieldType)) {
       return
     }
 
@@ -188,7 +189,7 @@ function EditFieldsModalController(
 
   vm.showBlankOptionsError = function (field) {
     // Blank options should only appear on fields that have options to choose from
-    if (!['dropdown', 'radiobutton', 'checkbox'].includes(field.fieldType)) {
+    if (!['dropdown', 'radiobutton', 'checkbox','district'].includes(field.fieldType)) {
       return false
     }
     return field.fieldOptions.some((element) => !element.length)
@@ -346,6 +347,7 @@ function EditFieldsModalController(
   vm.tableColumnNames = {
     textfield: 'Text Field',
     dropdown: 'Dropdown',
+    district: 'District',
   }
   vm.tableColumnTypes = Object.keys(vm.tableColumnNames)
 
@@ -395,6 +397,7 @@ function EditFieldsModalController(
       vm.field.fieldType === 'attachment' ||
       vm.field.fieldType === 'dropdown' ||
       vm.field.fieldType === 'radiobutton' ||
+      vm.field.fieldType === 'district' ||
       vm.field.fieldType === 'checkbox' ||
       vm.field.fieldType === 'table' ||
       vm.field.fieldType === 'image' ||
