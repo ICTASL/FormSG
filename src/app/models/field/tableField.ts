@@ -1,8 +1,8 @@
-import { isEmpty } from 'lodash'
-import { Schema } from 'mongoose'
+import {isEmpty} from 'lodash'
+import {Schema} from 'mongoose'
 
-import { BasicField } from '../../../../shared/types'
-import { IColumnSchema, ITableFieldSchema } from '../../../types'
+import {BasicField} from '../../../../shared/types'
+import {IColumnSchema, ITableFieldSchema} from '../../../types'
 
 const createColumnSchema = () => {
   const ColumnSchema = new Schema<IColumnSchema>(
@@ -24,7 +24,7 @@ const createColumnSchema = () => {
   )
 
   ColumnSchema.pre<IColumnSchema>('validate', function (next) {
-    const columnTypes = [BasicField.ShortText, BasicField.Dropdown]
+    const columnTypes = [BasicField.ShortText, BasicField.Dropdown, BasicField.District]
     const index = columnTypes.indexOf(this.columnType)
     if (index > -1) {
       return next()
