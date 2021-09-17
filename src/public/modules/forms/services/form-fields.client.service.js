@@ -90,7 +90,7 @@ function FormFields() {
       field.myInfo.verified = myInfoField.verified
 
       // fieldOptions for categorical fields
-      if (['dropdown', 'checkbox', 'radiobutton',,'district'].includes(field.fieldType)) {
+      if (['dropdown', 'checkbox', 'radiobutton','district'].includes(field.fieldType)) {
         field.fieldOptions = myInfoField.fieldOptions
         field.loadProgress = 0
       }

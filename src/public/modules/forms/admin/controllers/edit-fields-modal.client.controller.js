@@ -417,7 +417,7 @@ function EditFieldsModalController(
         // check if radiobutton or checkbox has at least 1 option
         return true
       } else if (
-        vm.field.fieldType === 'dropdown' &&
+        vm.field.fieldType === 'dropdown' || vm.field.fieldType === 'district' &&
         vm.field.fieldOptions.length === 0
       ) {
         return true

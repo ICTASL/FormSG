@@ -2,9 +2,10 @@ import {
   IColumnSchema,
   IDropdownFieldSchema,
   IShortTextFieldSchema,
+  IDistrictFieldSchema,
   OmitUnusedValidatorProps,
 } from '../../../types'
-import { IDistrictFieldSchema } from '../../../types/field/districtField'
+
 
 /**
  * Return type of createAnswerFieldFromColumn().
